@@ -19,6 +19,9 @@
             padding-bottom: 0px;
             margin-bottom: 0px;
         }
+        small {
+            font-size: 0.75rem;
+        }  
         .logout-btn {
             position: absolute;
             top: 20px;
@@ -59,15 +62,19 @@
 
     <div class="container text-center mt-5">
         <h3>Vacaciones Familiares</h3>
-        <a> Recaudado: ${{recaudado}} CLP</a>
+        <br>
+        <a> Recaudado: ${{recaudado}} CLP</a><br>
+        <a><small>Inscritos: {{n_viajeros}} - Listos: 0</small></a><br>
+        <a><small>Cuota: 50.000 CLP</small></a>
+        <br>
         <br>
         <br>
         {% for user in users %}
         <div class="row">
-            <div class="col-md-1 d-flex align-items-center justify-content-left">
+            <div class="col-sm-2 col-lg-1 d-flex align-items-center justify-content-left">
                 <span class="progress-label">{{ user['nombre'] }}</span>
             </div>
-            <div class="col-md-11">
+            <div class="col-sm-10 col-lg-11">
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-azul" role="progressbar" 
                          style="width: {{ (1 + user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 7.69 }}%;" 

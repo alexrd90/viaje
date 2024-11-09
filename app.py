@@ -58,7 +58,9 @@ def home():
     cuota = 50000
     recaudado = f"{total_pagados * cuota:,.0f}".replace(",", ".")
 
-    return render_template('home.html', users=users, recaudado=recaudado)
+    n_viajeros = len(users)
+
+    return render_template('home.html', users=users, recaudado=recaudado, n_viajeros=n_viajeros)
 
 @app.route('/logout')
 def logout():
