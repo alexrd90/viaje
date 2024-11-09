@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <!-- Vincular Bootstrap desde CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/airplane_view.jpg') }}');
+            background-size: cover;
+            color: white;
+        }
+        .login-card {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+            border-radius: 15px; /* Esquinas más redondeadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            color: black; /* Textos en negro */
+        }
+        .login-card h2 {
+            color: black; /* Color del título */
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 login-card">
+        <h2>Vamos de viaje!</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="alert alert-{{ messages[0][0] }}">{{ messages[0][1] }}</div>
+          {% endif %}
+        {% endwith %}
+        <form method="POST" class="text-center">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Usuario</label>
+                <input type="text" class="form-control" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="contraseña" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Entrar</button>
+        </form>
+    </div>
+    <!-- JavaScript de Bootstrap (opcional) -->
+    <script src="https://c
