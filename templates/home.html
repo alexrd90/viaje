@@ -70,15 +70,15 @@
             <div class="col-md-11">
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-azul" role="progressbar" 
-                         style="width: {{ (user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 8.33 }}%;" 
-                         aria-valuenow="{{ (user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 8.33 }}" 
+                         style="width: {{ (1 + user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 7.69 }}%;" 
+                         aria-valuenow="{{ (1 + user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 7.69 }}" 
                          aria-valuemin="0" aria-valuemax="100">
                     </div>
 
                     <!-- Imagen sobre el punto de avance -->
                     <img src="{{ url_for('static', filename='images/' ~ user['imagen']) }}" 
                          alt="{{ user['nombre'] }}" class="profile-pic"
-                         style="left: {{ (user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 8.33 }}%;">
+                         style="left: {{ (1 + user['mes_1'] + user['mes_2'] + user['mes_3'] + user['mes_4'] + user['mes_5'] + user['mes_6'] + user['mes_7'] + user['mes_8'] + user['mes_9'] + user['mes_10'] + user['mes_11'] + user['mes_12']) * 7.69 }}%;">
                 </div>
             </div>
         </div>
